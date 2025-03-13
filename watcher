@@ -1,0 +1,22 @@
+#!bin/env php
+<?php
+//echo "Watcher: keep watching your changese...";
+
+$watchFile = __DIR__ . "/test.php"; // File to watch
+$lastModified = filemtime($watchFile);
+
+echo "Watching $watchFile for changes...\n";
+
+while (true) {
+    clearstatcache();
+    $currentModified = filemtime($watchFile);
+
+    if ($currentModified !== $lastModified) {
+        echo "File changed, restarting script...\n";
+        shell_exec("php $watchFile"); // Restart your script
+        $lastModified = $currentModified;
+    }
+
+    sleep(1); // Prevent CPU overload
+}
+?>
