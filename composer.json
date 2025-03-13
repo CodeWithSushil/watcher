@@ -1,5 +1,5 @@
 {
-    "name": "watcher/watcher",
+    "name": "watcherphp/watcher",
     "description": "Watcher: seen you every changing in any files.",
     "type": "library",
     "license": "MIT",
