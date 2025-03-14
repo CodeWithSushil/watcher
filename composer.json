@@ -1,11 +1,11 @@
 {
     "name": "watcherphp/watcher",
-    "description": "Watcher: seen you every changing in any files.",
+    "description": "Watcher: Effortlessly Track and Manage Your File Changes Seamlessly",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Watcher\\Watcher\\": "src/"
+            "Watcher\\": "src/"
         }
     },
     "authors": [
@@ -16,6 +16,12 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": "^8.1"
+        "php": "^8.1",
+        "symfony/filesystem": "^7.2",
+        "symfony/console": "^7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0",
+        "phpstan/phpstan": "^2.1"
     }
 }

@@ -1,0 +1,20 @@
+# Ensure all PHP files use LF line endings
+*.php text eol=lf
+
+# Treat JSON, XML, and YAML files as text
+*.json text
+*.xml text
+*.yml text
+*.yaml text
+
+# Ignore log and vendor folders when exporting the repository
+logs/ export-ignore
+vendor/ export-ignore
+
+# Ignore test files when exporting
+tests/ export-ignore
+phpunit.xml export-ignore
+coverage/ export-ignore
+
+# Make CLI script executable on Unix systems
+bin/watcher export-subst eol=lf
